@@ -13,7 +13,6 @@ When(`user clicks accept`, () => {
 
 And(`user clicks on the safer gaming`, () => {
   cy.get(".css-v4ptfq > :nth-child(2) > .chakra-text").click();
-  // cy.wait(10000);
 });
 
 Then(`user is in safer gaming page`, () => {
@@ -24,7 +23,7 @@ Cypress.on("uncaught:exception", () => {
   return false;
 });
 
-//User is in safer gaming move to sportsbook
+//User going to sportsbook
 Given(`user is in safer gaming`, () => {
   cy.contains("Safer Gaming");
 });
@@ -36,7 +35,26 @@ And(`user clicks sportsbook`, () => {
 
 Then(`user is in sportsbook page`, () => {
   cy.wait(50000);
-  cy.contains("Live Now");
+  cy.contains("Today's Events");
+});
+
+Cypress.on("uncaught:exception", () => {
+  return false;
+});
+
+//User going to casino page
+Given(`user is in safer gaming`, () => {
+  cy.contains("Today's Events");
+});
+
+And(`user clicks casino`, () => {
+  cy.wait(50000);
+  cy.get(".css-v4ptfq > :nth-child(3) > .chakra-text").click();
+});
+
+Then(`user is in casino page`, () => {
+  cy.wait(50000);
+  cy.contains("SLOT");
 });
 
 Cypress.on("uncaught:exception", () => {

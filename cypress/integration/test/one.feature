@@ -6,8 +6,12 @@ When user clicks accept
 And user clicks on the safer gaming
 Then user is in safer gaming page
 
-Scenario: user is in safer gaming move to sportsbook
+Scenario: user going to sportsbook page
 Given user is in safer gaming
 When user clicks sportsbook
 Then user is in sportsbook page
 
+Scenario: user going to casino page
+Given user is in safer gaming
+When user clicks casino
+Then user is in casino page
