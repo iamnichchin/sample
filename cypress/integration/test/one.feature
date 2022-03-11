@@ -15,3 +15,8 @@ Scenario: user going to casino page
 Given user is in safer gaming
 When user clicks casino
 Then user is in casino page
+
+Scenario: user going to pragmatic play
+Given user is in casino page
+When user clicks pragmatic play
+Then user is in pragmatic play
