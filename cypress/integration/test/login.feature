@@ -14,7 +14,6 @@ And user types on the wrong username field
 And user types on the right password field
 Then user should see an error message
 
-
 Scenario: user will login with wrong password
 Given user is in main page
 When user clicks login
