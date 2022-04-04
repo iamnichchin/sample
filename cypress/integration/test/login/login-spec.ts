@@ -45,7 +45,7 @@ And(`user types on the right password field`, () => {
 });
 
 Then(`user should see an error message`, () => {
-  cy.contains("Invalid Credentials");
+  cy.contains("Your details have not been found.");
 });
 
 Cypress.on("uncaught:exception", () => {
@@ -70,7 +70,7 @@ And(`user types on the wrong password field`, () => {
 });
 
 Then(`user should see an error message`, () => {
-  cy.contains("Invalid Credentials");
+  cy.contains("Your details have not been found.");
 });
 
 Cypress.on("uncaught:exception", () => {
